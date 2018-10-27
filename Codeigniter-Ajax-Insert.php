@@ -8,7 +8,7 @@
 		$checkData = $this->model_name->methodName($data); //check data
 		 
 		if ($checkData == 0) {
-			$getData = $this->kenkarlo_model->methodName($data); // insert data
+			$getData = $this->model_name->methodName($data); // insert data
 			echo json_encode($getData['databaeeField']); //necessary for ajax
 		}
 		else {
@@ -27,7 +27,6 @@
 	}
 
 	public function insert_method($data) { // insert data
-		
 		return $this->db->INSERT('table-name', $data);
 	}
 
